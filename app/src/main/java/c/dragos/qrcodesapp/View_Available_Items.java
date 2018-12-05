@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +23,7 @@ public class View_Available_Items extends AppCompatActivity {
     private TextView AvailableItemsText;
     private FirebaseDatabase myDatabase;
     private DatabaseReference myDatabaseRef;
+    private ProgressBar progress;
 
 
 
@@ -39,12 +41,15 @@ public class View_Available_Items extends AppCompatActivity {
         myDatabase = FirebaseDatabase.getInstance();
         myDatabaseRef = myDatabase.getReference();
 
+        progress=(ProgressBar)findViewById(+R.id.progressBar);
+        progress.setVisibility(View.INVISIBLE);
+
         Button SearchButton = findViewById(R.id.TakeButton2);
 
         myDatabaseRef.child("Available Items").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                progress.setVisibility(View.VISIBLE);
                 Iterable<DataSnapshot> items = dataSnapshot.getChildren();
 
                 for (DataSnapshot contact : items) {
@@ -57,11 +62,8 @@ public class View_Available_Items extends AppCompatActivity {
                         AvailableItemsText.append(currentItem.Item);
 
                     }
-
-
-
                 }
-
+                progress.setVisibility(View.INVISIBLE);
             }
 
             @Override

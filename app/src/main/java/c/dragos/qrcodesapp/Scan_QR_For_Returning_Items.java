@@ -11,6 +11,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +48,7 @@ public class Scan_QR_For_Returning_Items extends AppCompatActivity {
     private FirebaseUser currentUser;
 
     private String ItemNameFromDatabase = " ";
+    private ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,8 @@ public class Scan_QR_For_Returning_Items extends AppCompatActivity {
         myDatabaseRef  = FirebaseDatabase.getInstance().getReference();
         myAuth = FirebaseAuth.getInstance();
         currentUser = myAuth.getCurrentUser();
+        progress=(ProgressBar)findViewById(+R.id.progressBar);
+        progress.setVisibility(View.INVISIBLE);
 
         ReturnItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,7 +178,7 @@ public class Scan_QR_For_Returning_Items extends AppCompatActivity {
     //Next function will search for Item with UID from QRCode in Firebase Realtime Database and will put it into a global variable for showing in GUI
 
     private void searchForItemNameInFirebaseDatabase(final String QRCode) {
-
+        progress.setVisibility(View.VISIBLE);
         myDatabaseRef.child("Available Items").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -188,10 +192,8 @@ public class Scan_QR_For_Returning_Items extends AppCompatActivity {
 
                          ItemNameFromDatabase = currentItem.Item;
                     }
-
-
-
                 }
+                progress.setVisibility(View.INVISIBLE);
             }
 
             @Override

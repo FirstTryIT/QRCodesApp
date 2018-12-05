@@ -28,6 +28,7 @@ public class Main_Page extends AppCompatActivity {
     private Button ViewAvailableItemsButton;
     private Button AddNewItemButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,7 @@ public class Main_Page extends AppCompatActivity {
         ShowItemsList = findViewById(R.id.ViewItemsButton);
         ViewAvailableItemsButton = findViewById(R.id.ViewAvailableItemsButton);
         AddNewItemButton = findViewById(R.id.AddItem);
+
 
         myDatabaseRef = FirebaseDatabase.getInstance().getReference();
         FirebaseAuth myAuth = FirebaseAuth.getInstance();
@@ -75,6 +77,7 @@ public class Main_Page extends AppCompatActivity {
         ShowItemsList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(Main_Page.this, View_All_My_Items.class));//3
 
             }
