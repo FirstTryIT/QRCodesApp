@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">QRCodesApp</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">PASSWORD:</string>
+    <string name="email">EMAIL:</string>
+    <string name="forgotPass">Forgot Password</string>
+</resources>

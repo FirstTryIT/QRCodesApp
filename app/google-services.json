@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "545523166417",
+    "firebase_url": "https://qrcodesapp-bb565.firebaseio.com",
+    "project_id": "qrcodesapp-bb565",
+    "storage_bucket": "qrcodesapp-bb565.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545523166417:android:cd5b219b9bdbe923",
+        "android_client_info": {
+          "package_name": "c.dragos.qrcodesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545523166417-2ohgegef1559712g9r5ib42g2833c6oc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "c.dragos.qrcodesapp",
+            "certificate_hash": "d150e3f16a717110f24970c3314b1d01dad62b2d"
+          }
+        },
+        {
+          "client_id": "545523166417-gbf1e62gcpuvr6mk4iine6cbornj9fd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEKq83zkduy6p7KJ0hewSX0WA0KMTDIZ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545523166417-gbf1e62gcpuvr6mk4iine6cbornj9fd0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

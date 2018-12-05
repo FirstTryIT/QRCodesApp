@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/NewPasswordTextView"
+        android:layout_width="127dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="128dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="189dp"
+        android:fontFamily="serif"
+        android:text="Item Name: "
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline60"
+        app:layout_constraintEnd_toStartOf="@+id/ReadItemNameTextView"
+        app:layout_constraintStart_toEndOf="@+id/guideline62"
+        app:layout_constraintTop_toBottomOf="@+id/guideline59" />
+
+    <EditText
+        android:id="@+id/ReadItemNameTextView"
+        android:layout_width="127dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="127dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginTop="189dp"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NewPasswordTextView"
+        app:layout_constraintTop_toBottomOf="@+id/guideline59" />
+
+    <Button
+        android:id="@+id/AddNewItemInDatabaseButton"
+        android:layout_width="137dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="50dp"
+        android:drawableLeft="@mipmap/add_item"
+        android:text="Add Item"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline62"
+        app:layout_constraintTop_toBottomOf="@+id/guideline60"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0"
+        app:layout_constraintGuide_begin="20dp" />
+
+</android.support.constraint.ConstraintLayout>

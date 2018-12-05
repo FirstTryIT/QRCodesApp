@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/ViewInfoButton"
+        android:layout_width="191dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="33dp"
+        android:drawableLeft="@mipmap/info"
+        android:text="View account informations"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline21"
+        app:layout_constraintTop_toBottomOf="@+id/guideline16" />
+
+    <Button
+        android:id="@+id/ViewItemsButton"
+        android:layout_width="191dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="34dp"
+        android:drawableLeft="@mipmap/view_items_info"
+        android:text="View all my items"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline21"
+        app:layout_constraintTop_toBottomOf="@+id/guideline17" />
+
+    <Button
+        android:id="@+id/ViewAvailableItemsButton"
+        android:layout_width="191dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="34dp"
+        android:drawableLeft="@mipmap/view_items_info"
+        android:text="View available items"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline56"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline21"
+        app:layout_constraintTop_toBottomOf="@+id/guideline18" />
+
+    <Button
+        android:id="@+id/AddItem"
+        android:layout_width="191dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="34dp"
+        android:drawableLeft="@mipmap/add_item"
+        android:text="Add new item"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline21"
+        app:layout_constraintTop_toBottomOf="@+id/guideline56" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1.0" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Black</item> //define the color for the title's fond of the app, that part with baterry level, clock, etc
+        <item name="colorPrimaryDark">@color/Black</item> //define the color for notifications bar of the phone
+        <item name="colorAccent">@color/DarkBlue</item> //define the color for text field's underline, etc
+        <item name="android:textColorPrimary">@color/Red</item>
+        <item name="android:textColorPrimaryInverse">@color/Red</item>
+    </style>
+
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="c.dragos.qrcodesapp">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <!--
+     Set color used with incoming notification messages. This is used when no color is set for the incoming
+     notification message. See README(https://goo.gl/6BKBk7) for more.
+    -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/fev"
+        android:label="FEV"
+        android:logo="@mipmap/fev"
+        android:roundIcon="@mipmap/fev"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="c.dragos.qrcodesapp.NotificationPublisher"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.Log_In_Informations"
+            android:parentActivityName="c.dragos.qrcodesapp.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.Main_Page"
+            android:parentActivityName="c.dragos.qrcodesapp.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.View_Informations_about_User"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.View_All_My_Items"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.Scan_QR_For_Taking_Items"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.Add_Or_Remove_Item_From_A_User"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.Add_New_Item_On_Database"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.Change_Password"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="c.dragos.qrcodesapp.Scan_QR_For_Returning_Items"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.View_All_My_Items"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="c.dragos.qrcodesapp.View_Available_Items"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="c.dragos.qrcodesapp.Reset_Password"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
