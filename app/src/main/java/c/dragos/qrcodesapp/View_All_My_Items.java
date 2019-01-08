@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,6 +33,7 @@ public class View_All_My_Items  extends AppCompatActivity {
     private FirebaseAuth myAuth;
     private FirebaseUser currentUser;
 
+    private ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class View_All_My_Items  extends AppCompatActivity {
         myAuth = FirebaseAuth.getInstance();
         currentUser = myAuth.getCurrentUser();
 
+        progress=(ProgressBar)findViewById(+R.id.progressBar);
+        progress.setVisibility(View.INVISIBLE);
 
 
         if (currentUser != null) {
@@ -73,6 +77,7 @@ public class View_All_My_Items  extends AppCompatActivity {
 
     private void showAllMyItemsFromDatabase() {
 
+        progress.setVisibility(View.VISIBLE);
         myDatabaseRef.child("Available Items").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -87,7 +92,8 @@ public class View_All_My_Items  extends AppCompatActivity {
                         ItemsTextView.append(currentItem.Item.toString());
                         ItemsTextView.append(System.getProperty("line.separator"));
                     }
-             }
+                }
+                progress.setVisibility(View.INVISIBLE);
             }
 
             @Override

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,7 +36,7 @@ public class View_Informations_about_User extends AppCompatActivity {
     private DatabaseReference myDatabaseRef;
     private FirebaseAuth myAuth;
     private FirebaseUser currentUser;
-
+    private ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +51,13 @@ public class View_Informations_about_User extends AppCompatActivity {
         Email = findViewById(R.id.Email);
         PhoneNumber = findViewById(R.id.PhoneNumber);
 
+        progress=(ProgressBar)findViewById(+R.id.progressBar);
         myDatabaseRef  = FirebaseDatabase.getInstance().getReference();
         myAuth = FirebaseAuth.getInstance();
         currentUser = myAuth.getCurrentUser();
 
+
+        progress.setVisibility(View.INVISIBLE);
 
         if (currentUser != null) {
             showInformationsFromFirebase();
@@ -96,6 +100,7 @@ public class View_Informations_about_User extends AppCompatActivity {
 
     private void showInformationsFromFirebase(){
 
+        progress.setVisibility(View.VISIBLE);
         myDatabaseRef.child("Users").child(currentUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -104,6 +109,7 @@ public class View_Informations_about_User extends AppCompatActivity {
                 Name.setText(user.Name);
                 Email.setText(user.Email);
                 PhoneNumber.setText(user.PhoneNumber);
+                progress.setVisibility(View.INVISIBLE);
 
             }
 
@@ -115,18 +121,21 @@ public class View_Informations_about_User extends AppCompatActivity {
     }
 
     private void WriteNewUserOnDatabase(String ID, String Name, String PhoneNumber, String Email) {
-
+        progress.setVisibility(View.VISIBLE);
         FevUser user = new FevUser(Name, PhoneNumber,Email,false);
 
         myDatabaseRef.child("Users").child(ID).setValue(user);
 
         toastMessage("Informations saved successful!");
         startActivity(new Intent(View_Informations_about_User.this, Main_Page.class));//3
+        progress.setVisibility(View.INVISIBLE);
 
     }
 
     private void toastMessage(String text) {
+        progress.setVisibility(View.VISIBLE);
         Toast.makeText(View_Informations_about_User.this, text,
                 Toast.LENGTH_SHORT).show();
+        progress.setVisibility(View.INVISIBLE);
     }
 }
