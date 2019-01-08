@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+//Modify the layout, too for finding the group of item
 
 public class Add_New_Item_On_Database extends AppCompatActivity {
 
@@ -53,7 +54,7 @@ public class Add_New_Item_On_Database extends AppCompatActivity {
 
                     Items currentItem;
 
-                    currentItem = new Items(ItemName,true," "," "," ");
+                    currentItem = new Items(ItemName,true," "," "," ","","");
                     myDatabaseRef.child("Available Items").push().setValue(currentItem);
 
                     toastMessage("Item was added with success!");

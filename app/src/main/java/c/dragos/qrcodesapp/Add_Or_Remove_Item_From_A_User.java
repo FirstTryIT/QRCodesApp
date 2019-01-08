@@ -169,6 +169,7 @@ public class Add_Or_Remove_Item_From_A_User extends AppCompatActivity {
                                     myDatabaseRef.child("Available Items").child(Data).child("UserID").setValue("None");
                                     myDatabaseRef.child("Available Items").child(Data).child("UserEmail").setValue("None");
                                     myDatabaseRef.child("Available Items").child(Data).child("ItemID").setValue(contact.getKey());
+                                    myDatabaseRef.child("Available Items").child(Data).child("LastUser").setValue(currentUser.getEmail());
 
                                     Ok = true;
                                 }

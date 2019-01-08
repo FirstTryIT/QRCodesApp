@@ -112,6 +112,12 @@
             android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="c.dragos.qrcodesapp.ViewAvailableItemsGroups"
+            android:configChanges="orientation"
+            android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
+            android:screenOrientation="portrait" />
+
         <activity android:name="c.dragos.qrcodesapp.Reset_Password"
             android:parentActivityName="c.dragos.qrcodesapp.Main_Page"
             android:configChanges="orientation"
