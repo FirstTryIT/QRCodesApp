@@ -20,9 +20,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-/**
- * Created by Bogdan on 18.09.2018.
- */
 
 public class View_Informations_about_User extends AppCompatActivity {
 
@@ -51,7 +48,7 @@ public class View_Informations_about_User extends AppCompatActivity {
         Email = findViewById(R.id.Email);
         PhoneNumber = findViewById(R.id.PhoneNumber);
 
-        progress=(ProgressBar)findViewById(+R.id.progressBar);
+        progress=findViewById(+R.id.progressBar);
         myDatabaseRef  = FirebaseDatabase.getInstance().getReference();
         myAuth = FirebaseAuth.getInstance();
         currentUser = myAuth.getCurrentUser();
