@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +24,7 @@ public class View_Available_Items extends AppCompatActivity {
     private FirebaseDatabase myDatabase;
     private DatabaseReference myDatabaseRef;
     private String Item;
-
+    private ProgressBar progress;
 
 
     @Override
@@ -32,6 +33,7 @@ public class View_Available_Items extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_available_items);
 
+        progress=findViewById(+R.id.progressBar);
         MainPageButton = findViewById(R.id.ReturnToMainPageButton);
         AvailableItemsText = findViewById(R.id.AvailableItemsTextView);
         AvailableItemsText.setMovementMethod(new ScrollingMovementMethod());
@@ -41,6 +43,8 @@ public class View_Available_Items extends AppCompatActivity {
         myDatabaseRef = myDatabase.getReference();
 
         Button SearchButton = findViewById(R.id.TakeButton2);
+
+        progress.setVisibility(View.VISIBLE);
 
         Bundle extras = getIntent().getExtras();
         Item = extras.getString("Item");
@@ -57,19 +61,15 @@ public class View_Available_Items extends AppCompatActivity {
 
                     if (currentItem.Availability) {
 
-                        if (currentItem.Item.equals(Item)) {
+                        if (currentItem.ItemGroup.equals(Item)) {
 
                             AvailableItemsText.append(System.getProperty("line.separator"));
                             AvailableItemsText.append(currentItem.Item);
 
                         }
-
-
                     }
-
-
-
                 }
+                progress.setVisibility(View.INVISIBLE);
 
             }
 

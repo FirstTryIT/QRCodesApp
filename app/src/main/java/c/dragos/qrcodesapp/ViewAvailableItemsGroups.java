@@ -45,7 +45,7 @@ public class ViewAvailableItemsGroups extends AppCompatActivity {
 
                 //Transfer the date to View_Available_Items for showing the specified group of items
                 Intent myIntent = new Intent(ViewAvailableItemsGroups.this, View_Available_Items.class);
-                myIntent.putExtra("Item","Dem");
+                myIntent.putExtra("Item","DEM");
                 ViewAvailableItemsGroups.this.startActivity(myIntent);
 
             }
@@ -81,7 +81,7 @@ public class ViewAvailableItemsGroups extends AppCompatActivity {
 
                 //Transfer the date to View_Available_Items for showing the specified group of items
                 Intent myIntent = new Intent(ViewAvailableItemsGroups.this, View_Available_Items.class);
-                myIntent.putExtra("Item","Camera");
+                myIntent.putExtra("Item","CAM");
                 ViewAvailableItemsGroups.this.startActivity(myIntent);
 
             }

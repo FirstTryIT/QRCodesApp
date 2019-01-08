@@ -82,7 +82,7 @@ public class Main_Page extends AppCompatActivity {
         ShowItemsList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main_Page.this, ViewAvailableItemsGroups.class));//3
+                startActivity(new Intent(Main_Page.this, View_All_My_Items.class));//3
 
             }
         });
@@ -90,7 +90,7 @@ public class Main_Page extends AppCompatActivity {
         ViewAvailableItemsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main_Page.this, View_Available_Items.class));
+                startActivity(new Intent(Main_Page.this, ViewAvailableItemsGroups.class));
             }
         });
 
