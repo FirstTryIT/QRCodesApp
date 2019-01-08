@@ -7,13 +7,13 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/NewPasswordTextView"
+        android:id="@+id/ItemName"
         android:layout_width="127dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="128dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="189dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="129dp"
         android:fontFamily="serif"
         android:text="Item Name: "
         android:textAlignment="center"
@@ -28,18 +28,19 @@
         android:id="@+id/ReadItemNameTextView"
         android:layout_width="127dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="127dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginTop="189dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="129dp"
         android:fontFamily="serif"
         android:textAlignment="center"
+        android:textColor="@color/Black"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline60"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/NewPasswordTextView"
+        app:layout_constraintStart_toEndOf="@+id/ItemName"
         app:layout_constraintTop_toBottomOf="@+id/guideline59" />
+
 
     <Button
         android:id="@+id/AddNewItemInDatabaseButton"

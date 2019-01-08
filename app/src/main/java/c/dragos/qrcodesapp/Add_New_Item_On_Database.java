@@ -46,6 +46,44 @@ public class Add_New_Item_On_Database extends AppCompatActivity {
             public void onClick(View v) {
 
                 String ItemName = ReadItemName.getText().toString();
+                String ItemGroup;
+
+                if (ItemName.contains("DEM") || ItemName.contains("Dem") || ItemName.contains("dem")) {
+                    ItemGroup = "DEM";
+                }
+
+                else
+                    if (ItemName.contains("Monitor") || ItemName.contains("MONITOR") || ItemName.contains("monitor")) {
+                      ItemGroup = "Monitor";
+                     }
+
+                    else
+                        if (ItemName.contains("BDC") || ItemName.contains("bdc") || ItemName.contains("Bdc")) {
+                          ItemGroup = "BDC";
+                        }
+
+                        else
+                            if (ItemName.contains("CAM") || ItemName.contains("Cam") || ItemName.contains("cam")) {
+                              ItemGroup = "CAM";
+                              }
+                            else
+                                if (ItemName.contains("can") || ItemName.contains("CAN") || ItemName.contains("Can")) {
+                                  ItemGroup = "CANoe";
+                               }
+                                else
+                                    if (ItemName.contains("Lauterbach") || ItemName.contains("lauterbach") || ItemName.contains("LAUTERBACH")) {
+                                        ItemGroup = "Lauterbach";
+                                     }
+                                    else
+                                        if (ItemName.contains("Phone") || ItemName.contains("phone") || ItemName.contains("PHONE")) {
+                                         ItemGroup = "Phone";
+                                         }
+                                        else {
+                                            ItemGroup = "Others";
+                                        }
+
+
+
 
                 if (!ItemName.equals("")) {
 
@@ -54,7 +92,7 @@ public class Add_New_Item_On_Database extends AppCompatActivity {
 
                     Items currentItem;
 
-                    currentItem = new Items(ItemName,true," "," "," ","","");
+                    currentItem = new Items(ItemName,true," "," "," ","",ItemGroup);
                     myDatabaseRef.child("Available Items").push().setValue(currentItem);
 
                     toastMessage("Item was added with success!");
