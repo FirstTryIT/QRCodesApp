@@ -48,34 +48,34 @@ public class Add_New_Item_On_Database extends AppCompatActivity {
                 String ItemName = ReadItemName.getText().toString();
                 String ItemGroup;
 
-                if (ItemName.contains("DEM") || ItemName.contains("Dem") || ItemName.contains("dem")) {
+                if (ItemName.toLowerCase().contains("dem")) {
                     ItemGroup = "DEM";
                 }
 
                 else
-                    if (ItemName.contains("Monitor") || ItemName.contains("MONITOR") || ItemName.contains("monitor")) {
+                    if (ItemName.toLowerCase().contains("monitor")) {
                       ItemGroup = "Monitor";
                      }
 
                     else
-                        if (ItemName.contains("BDC") || ItemName.contains("bdc") || ItemName.contains("Bdc")) {
+                        if (ItemName.toLowerCase().contains("bdc")) {
                           ItemGroup = "BDC";
                         }
 
                         else
-                            if (ItemName.contains("CAM") || ItemName.contains("Cam") || ItemName.contains("cam")) {
+                            if (ItemName.toLowerCase().contains("cam")) {
                               ItemGroup = "CAM";
                               }
                             else
-                                if (ItemName.contains("can") || ItemName.contains("CAN") || ItemName.contains("Can")) {
+                                if (ItemName.toLowerCase().contains("can")) {
                                   ItemGroup = "CANoe";
                                }
                                 else
-                                    if (ItemName.contains("Lauterbach") || ItemName.contains("lauterbach") || ItemName.contains("LAUTERBACH")) {
+                                    if (ItemName.toLowerCase().contains("lauterbach")) {
                                         ItemGroup = "Lauterbach";
                                      }
                                     else
-                                        if (ItemName.contains("Phone") || ItemName.contains("phone") || ItemName.contains("PHONE")) {
+                                        if (ItemName.toLowerCase().contains("phone")) {
                                          ItemGroup = "Phone";
                                          }
                                         else {
